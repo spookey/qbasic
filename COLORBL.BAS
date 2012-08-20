@@ -1,0 +1,16 @@
+CLS
+SCREEN 13
+WINDOW (0, 0)-(1000, 1000)
+FOR i% = 500 TO 1000 STEP 10
+CLS
+LINE (0 + i%, 0 + i%)-(1000 - i%, 1000 - i%), 15, B
+NEXT i%
+SLEEP 1
+LINE (0, 0)-(1000, 1000), 15, BF
+SLEEP 1
+DO
+FOR i% = 0 TO 255
+LINE (0, 0)-(1000, 1000), i%, BF
+NEXT i%
+LOOP UNTIL INKEY$ <> ""
+

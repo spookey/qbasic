@@ -1,0 +1,13 @@
+CLS
+SCREEN 13
+WINDOW (0, 0)-(10000, 10000)
+FOR l% = 0 TO 10000 STEP 100
+LINE (5000, 5000)-(0, l%), l%
+LINE (5000, 5000)-(10000, l%), l%
+LINE (5000, 5000)-(l%, 10000), l%
+LINE (5000, 5000)-(l%, 0), l%
+NEXT l%
+DO
+
+LOOP UNTIL INKEY$ <> ""
+

@@ -1,0 +1,9 @@
+CLS
+SCREEN 13
+FOR k% = 0 TO 320 STEP 1
+CLS
+LINE (0, 0)-(k%, 200), 15, BF
+NEXT k%
+DO
+LOOP UNTIL INKEY$ <> ""
+

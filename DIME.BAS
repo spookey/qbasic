@@ -1,0 +1,53 @@
+DECLARE SUB no1 ()
+DECLARE SUB no2 ()
+DECLARE SUB no3 ()
+DECLARE SUB no4 ()
+DO
+CLS
+SCREEN 12
+WINDOW (0, 0)-(1000, 1000)
+no1
+SLEEP 1
+no2
+no3
+SLEEP 1
+no4
+SLEEP 2
+LOOP UNTIL INKEY$ <> ""
+
+SUB no1
+FOR r% = 0 TO 750 STEP 50
+COLOR 15
+LINE (0, r%)-(1000, r%)
+NEXT r%
+END SUB
+
+SUB no2
+m = 0
+DO
+COLOR 0
+LINE (500, 750)-(1000, m)
+m = m + 1
+IF m = 750 THEN GOTO 1
+LOOP
+1
+END SUB
+
+SUB no3
+m = 750
+DO
+COLOR 0
+LINE (500, 750)-(0, m)
+m = m - 1
+IF m = 0 THEN GOTO 2
+LOOP
+2
+END SUB
+
+SUB no4
+FOR l% = 0 TO 1000 STEP 100
+COLOR 15
+LINE (500, 750)-(l%, 0)
+NEXT l%
+END SUB
+
